@@ -70,4 +70,30 @@ function welcomeChecker() {
 
 }
 
+function loadAnimation() {
+  let title = document.querySelector(".nav-logo");
+  let header = document.querySelector("header");
+  let body = document.querySelector("body");
+  let main = document.querySelector("main"); 
+  let footer = document.querySelector("footer");
+
+  title.classList.add("blur-out-contract");
+  setTimeout(init, 1900, "E-Crypt", title);
+  setTimeout(() => {   title.classList.add("focus-in-expand");}, 800);
+  setTimeout( () => { 
+    body.style.height = (body.offsetHeight / 2) + "px";
+    main.style.flex = "0.8";
+    header.style.flex = "0.1";
+    footer.style.flex  = "0.1";
+    title.classList.add("asd");
+  }, 2600 )
+  
+
+  
+
+
+
+}
+
 welcomeChecker();
+loadAnimation();

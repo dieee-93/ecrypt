@@ -2,9 +2,13 @@
     animation: alert 4s ease !important;
   }
 
+  .blur-out-contract {
+    -webkit-animation: blur-out-contract 1s cubic-bezier(0.550, 0.085, 0.680, 0.530)  both;
+            animation: blur-out-contract 1s cubic-bezier(0.550, 0.085, 0.680, 0.530)  both;
+  }
+
   .focus-in-expand {
-    -webkit-animation: focus-in-expand 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-            animation: focus-in-expand 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: focus-in-expand 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1s both;
   }
 
   .newAlert {
@@ -29,6 +33,24 @@ p:after {
     word-break: break-all;
     opacity: 0.5;
 }
+
+
+
+h1:before {
+  content: attr(data-before);
+  word-break: break-all;
+  opacity: 0.5;
+}
+h1:after {
+  content: attr(data-after);
+  word-break: break-all;
+  opacity: 0.5;
+}
+
+.asd:before {
+content: none;
+}
+
 
 #alert {
     position: fixed;
@@ -56,44 +78,38 @@ p:after {
   }
 
 
-  @keyframes headerAnimation {
-    
-  }
-
-  @keyframes bodyAnimation {
-
-  }
-
-  @keyframes footerAnimation {
-
-
-  }
-
-
-
-@-webkit-keyframes focus-in-expand {
+ @-webkit-keyframes blur-out-contract {
   0% {
-    letter-spacing: -0.5em;
-    -webkit-filter: blur(12px);
-            filter: blur(12px);
-    opacity: 0;
+    -webkit-filter: blur(0.01);
+            filter: blur(0.01);
   }
   100% {
-    -webkit-filter: blur(0px);
-            filter: blur(0px);
-    opacity: 1;
+    letter-spacing: -0.5em;
+    -webkit-filter: blur(12px) opacity(0%);
+            filter: blur(12px) opacity(0%);
   }
 }
+@keyframes blur-out-contract {
+  0% {
+    -webkit-filter: blur(0.01);
+            filter: blur(0.01);
+  }
+  100% {
+    letter-spacing: -0.5em;
+    -webkit-filter: blur(12px) opacity(0%);
+            filter: blur(12px) opacity(0%);
+  }
+}
+
+
 @keyframes focus-in-expand {
   0% {
     letter-spacing: -0.5em;
-    -webkit-filter: blur(12px);
-            filter: blur(12px);
+    filter: blur(12px);
     opacity: 0;
   }
   100% {
-    -webkit-filter: blur(0px);
-            filter: blur(0px);
+    filter: blur(0px);
     opacity: 1;
   }
 }

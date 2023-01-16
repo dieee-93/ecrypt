@@ -9,6 +9,14 @@ header {
   transition: 1s flex ease-in;
 }
 
+body {
+  transition: 1s height ease-in, 1s flex ease-in;
+}
+
+footer {
+  transition: 1s flex ease-in;
+}
+
 :root {
   --primary-bg-color: #202020;
   --secondary-bg-color: #333533;
@@ -170,9 +178,9 @@ header {
 body {
   margin: 0px;
   width: 100vw;
-  height: 100vh;
+  height: 200vh;
   display: flex;
-  flex-flow: column wrap;
+  flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
   background-color: var(--primary-bg-color);
@@ -181,22 +189,25 @@ body {
   font-size: 16px;
 }
 
-main {
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-around;
-  align-items: center;
-  width: 100%;
-  height: 80%;
-}
 header {
   display: flex;
+  flex: 1;
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
   width: 100vw;
   height: 10%;
   background-color: var(--secondary-bg-color);
+}
+
+main {
+  display: flex;
+  flex: 0.5;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 80%;
 }
 
 nav {
@@ -218,7 +229,6 @@ nav h1::first-letter {
   color: var(--primary-color);
 }
 
-
 textarea {
   resize: none;
 }
@@ -228,6 +238,7 @@ footer {
   flex-flow: row nowrap;
   justify-content: space-around;
   align-items: center;
+  flex: 0.5;
   height: 10%;
   width: 100%;
   background-color: var(--primary-bg-color);
@@ -294,7 +305,7 @@ footer p {
   body {
     background-color: #202020;
     font-size: 16px;
-    height: 200vh;
+    height: 400vh;
     width: 100vw;
     display: flex;
     flex-flow: column nowrap;
@@ -302,7 +313,7 @@ footer p {
   }
 
   header {
-    height: 5%;
+    flex:0.8;
   }
 
   main {
@@ -310,7 +321,7 @@ footer p {
     justify-content: space-between;
     align-items: center;
     width: 90%;
-    height: 88%;
+    flex: 1;
   }
   .nav-logo {
     font-size: 1.5rem;
@@ -330,7 +341,7 @@ footer p {
   }
 
   footer {
-    height: 5%;
+    flex: 1;
     font-size: 0.6em;
   }
 
@@ -364,7 +375,7 @@ footer p {
   }
 
   body {
-    height: 200vh;
+    height: 400vh;
     font-size: 10px;
   }
 
