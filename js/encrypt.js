@@ -72,6 +72,7 @@ function toggleCrypt() {
 }
 
 function deleteMsg() {
+  newAlert("Mensaje eliminado exitosamente.", "var(--secondary-color)");
   this.parentElement.parentElement.remove();
   welcomeChecker();
 }
