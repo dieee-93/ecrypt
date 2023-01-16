@@ -118,7 +118,7 @@ function generarBotones(lockIcon) {
     }
     if (lockIcon == "unlock") {
       newMsgDecryptBtn.classList.add("unlock");
-      newMsgDecryptBtn.append(decryptIcon, encryptIcon);
+      newMsgDecryptBtn.append(encryptIcon, decryptIcon);
       decryptIcon.style.display = "none";
     }
 
