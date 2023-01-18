@@ -77,8 +77,7 @@ function loadAnimation() {
   let main = document.querySelector("main"); 
   let footer = document.querySelector("footer");
 
-  title.classList.add("blur-out-contract");
-  setTimeout(init, 1900, "E-Crypt", title);
+  setTimeout(init, 1, "E-Crypt", title);
   setTimeout(() => {   title.classList.add("focus-in-expand");}, 800);
   setTimeout( () => { 
     body.style.height = (body.offsetHeight / 2) + "px";
